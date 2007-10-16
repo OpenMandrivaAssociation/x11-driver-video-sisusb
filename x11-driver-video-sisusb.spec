@@ -1,6 +1,6 @@
 Name: x11-driver-video-sisusb
 Version: 0.8.1
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: The X.org video driver for SiS video chips connected via a Net2280-based USB dongle
 Group: Development/X11
 URL: http://xorg.freedesktop.org
@@ -19,9 +19,7 @@ The X.org video driver for SiS video chips connected via a Net2280-based USB don
 %setup -q -n xf86-video-sisusb-%{version}
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
-
+%configure
 %make
 
 %install
@@ -37,3 +35,4 @@ rm -rf %{buildroot}
 %{_libdir}/xorg/modules/drivers/sisusb_drv.la
 %{_libdir}/xorg/modules/drivers/sisusb_drv.so
 %{_mandir}/man4/sisusb.*
+
