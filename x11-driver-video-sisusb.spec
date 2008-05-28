@@ -13,7 +13,7 @@ BuildRequires: x11-util-macros >= 1.0.1
 Conflicts: xorg-x11-server < 7.0
 
 %description
-The X.org video driver for SiS video chips connected
+The X.org video driver for SiS video chips connected.
 via a Net2280-based USB dongle.
 
 %prep
