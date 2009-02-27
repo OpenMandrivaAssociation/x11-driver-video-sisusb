@@ -12,12 +12,14 @@ BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
 Conflicts: xorg-x11-server < 7.0
 
+Patch1: 0001-Fix-build-with-Werror-format-security.patch
 %description
 x11-driver-video-sisusb is the X.org video driver for SiS video chips
 connected via a Net2280-based USB dongle.
 
 %prep
 %setup -q -n xf86-video-sisusb-%{version}
+%patch1 -p1
 
 %build
 %configure
