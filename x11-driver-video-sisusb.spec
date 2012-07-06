@@ -4,10 +4,10 @@ Name: x11-driver-video-sisusb
 Version: 0.9.5
 %if 0%git
 Release: 0.%git.1
-Source: xf86-video-sisusb-%git.tar.xz
+Source0: xf86-video-sisusb-%git.tar.xz
 %else
-Release: 1
-Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-sisusb-%{version}.tar.bz2
+Release: 2
+Source0: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-sisusb-%{version}.tar.bz2
 %endif
 Summary: Driver for SiS video chips connected via a Net2280-based USB dongle
 Group: System/X11
