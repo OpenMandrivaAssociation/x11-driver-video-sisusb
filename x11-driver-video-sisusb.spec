@@ -1,12 +1,14 @@
-%define git 20120327
+#% define git 20120327
+%define git 0
+
 
 Name: x11-driver-video-sisusb
-Version: 0.9.5
+Version: 0.9.6
 %if 0%git
 Release: 0.%git.1
 Source0: xf86-video-sisusb-%git.tar.xz
 %else
-Release: 2
+Release: 1
 Source0: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-sisusb-%{version}.tar.bz2
 %endif
 Summary: Driver for SiS video chips connected via a Net2280-based USB dongle
