@@ -8,7 +8,7 @@ Version: 0.9.6
 Release: 0.%git.1
 Source0: xf86-video-sisusb-%git.tar.xz
 %else
-Release: 2
+Release: 3
 Source0: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-sisusb-%{version}.tar.bz2
 %endif
 Summary: Driver for SiS video chips connected via a Net2280-based USB dongle
@@ -19,6 +19,7 @@ URL: http://xorg.freedesktop.org
 BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: pkgconfig(xorg-server) >= 1.13
 BuildRequires: x11-util-macros >= 1.0.1
+BuildRequires: pkgconfig(glproto) >= 1.4.16
 Conflicts: xorg-x11-server < 7.0
 
 Requires: x11-server-common %(xserver-sdk-abi-requires videodrv)
@@ -33,10 +34,12 @@ connected via a Net2280-based USB dongle.
 %else
 %setup -qn xf86-video-sisusb-%{version}
 %endif
-[ -e autogen.sh ] && ./autogen.sh --help
+aclocal
+automake -a
+autoconf
 
 %build
-%configure2_5x
+CFLAGS="$RPM_OPT_FLAGS -I%_includedir/xorg" %configure2_5x
 %make
 
 %install
