@@ -21,9 +21,7 @@ connected via a Net2280-based USB dongle.
 
 %prep
 %setup -qn xf86-video-sisusb-%{version}
-aclocal
-automake -a
-autoconf
+autoreconf -fiv
 
 %build
 CFLAGS="%{optflags} -I%{_includedir}/xorg" %configure2_5x
