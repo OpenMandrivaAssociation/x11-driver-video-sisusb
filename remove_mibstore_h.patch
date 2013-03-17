@@ -1,0 +1,10 @@
+--- xf86-video-sisusb-0.9.6/src/sisusb_driver.c~	2012-07-17 05:21:16.000000000 +0000
++++ xf86-video-sisusb-0.9.6/src/sisusb_driver.c	2013-03-17 05:48:04.493873867 +0000
+@@ -39,7 +39,6 @@
+ #include "shadowfb.h"
+ #include "micmap.h"
+ #include "mipointer.h"
+-#include "mibstore.h"
+ 
+ #include "sisusb_regs.h"
+ #include "sisusb_dac.h"

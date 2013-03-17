@@ -6,6 +6,7 @@ Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-sisusb-%{version}.tar.bz2
+Patch0:		remove_mibstore_h.patch
 
 BuildRequires:	pkgconfig(glproto)
 BuildRequires:	pkgconfig(xorg-macros)
@@ -19,6 +20,7 @@ connected via a Net2280-based USB dongle.
 
 %prep
 %setup -qn xf86-video-sisusb-%{version}
+%apply_patches
 autoreconf -fiv
 
 %build
