@@ -1,7 +1,7 @@
 Summary:	Driver for SiS video chips connected via a Net2280-based USB dongle
 Name:		x11-driver-video-sisusb
 Version:	0.9.6
-Release:	10
+Release:	11
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
