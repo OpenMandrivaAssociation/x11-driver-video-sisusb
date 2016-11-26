@@ -1,0 +1,24 @@
+--- xf86-video-sisusb-0.9.6.20161117/src/compat-api.h.omv~	2016-11-17 02:11:59.878062509 +0100
++++ xf86-video-sisusb-0.9.6.20161117/src/compat-api.h	2016-11-17 02:12:07.311887848 +0100
+@@ -75,8 +75,8 @@
+ 
+ #define SCREEN_INIT_ARGS_DECL ScreenPtr pScreen, int argc, char **argv
+ 
+-#define BLOCKHANDLER_ARGS_DECL ScreenPtr arg, pointer pTimeout, pointer pReadmask
+-#define BLOCKHANDLER_ARGS arg, pTimeout, pReadmask
++#define BLOCKHANDLER_ARGS_DECL ScreenPtr arg, pointer pTimeout
++#define BLOCKHANDLER_ARGS arg, pTimeout
+ 
+ #define CLOSE_SCREEN_ARGS_DECL ScreenPtr pScreen
+ #define CLOSE_SCREEN_ARGS pScreen
+--- xf86-video-sisusb-0.9.6.20161117/src/sisusb.h.omv~	2016-11-17 02:09:28.082623948 +0100
++++ xf86-video-sisusb-0.9.6.20161117/src/sisusb.h	2016-11-17 02:09:32.640517165 +0100
+@@ -29,7 +29,7 @@
+  *
+  */
+ 
+-#ifndef _SISUSB_H
++#ifndef _SISUSB_H_
+ #define _SISUSB_H_
+ 
+ #include <sys/types.h>
