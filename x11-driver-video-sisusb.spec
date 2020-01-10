@@ -19,7 +19,7 @@ connected via a Net2280-based USB dongle.
 
 %prep
 %setup -qn xf86-video-sisusb-%{version}
-%apply_patches
+%autopatch -p1
 autoreconf -fiv
 
 %build
