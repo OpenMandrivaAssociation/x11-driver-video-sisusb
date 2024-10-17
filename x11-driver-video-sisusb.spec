@@ -4,7 +4,7 @@ Version:	0.9.7
 Release:	5
 Group:		System/X11
 License:	MIT
-Url:		http://xorg.freedesktop.org
+Url:		https://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-sisusb-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(glproto)
