@@ -7,6 +7,7 @@ License:	MIT
 Url:		https://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-sisusb-%{version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires:	pkgconfig(glproto)
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xorg-server)
